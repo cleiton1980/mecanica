@@ -3,6 +3,7 @@ package br.com.mecanica.domain;
 public class Fabricante {
 	
 	private Long codigo;
+	private String descricao;
 	public Long getCodigo() {
 		return codigo;
 	}
@@ -15,5 +16,10 @@ public class Fabricante {
 	public void setDescricao(String descricao) {
 		this.descricao = descricao;
 	}
-	private String descricao;
+	@Override
+	public String toString() {
+		String saida = codigo + " - " + descricao;
+		return saida;
+	}
+	
 }
